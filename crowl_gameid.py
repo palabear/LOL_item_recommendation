@@ -21,11 +21,6 @@ request_header = {
     "X-Riot-Token": "RGAPI-a0db683c-78a3-4efd-9cdb-2aa0352e7062"
 }
 
-def summoner_v4_by_summoner_name(summonerName):
-    encodingSummonerName = parse.quote(summonerName)
-    url = f"https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/{encodingSummonerName}"
-    return requests.get(url, headers=request_header).json()
-
 url = 'https://kr.api.riotgames.com/lol/league/v4/masterleagues/by-queue/RANKED_SOLO_5x5?api_key=' + api_key
 
 summonerId = {}
